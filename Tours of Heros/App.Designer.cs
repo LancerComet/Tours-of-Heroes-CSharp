@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dashboard = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.heroes = new System.Windows.Forms.Button();
             this.topHeroesLabel = new System.Windows.Forms.Label();
             this.topHeroesList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // dashboard
-            // 
-            this.dashboard.Location = new System.Drawing.Point(24, 63);
-            this.dashboard.Name = "dashboard";
-            this.dashboard.Size = new System.Drawing.Size(75, 23);
-            this.dashboard.TabIndex = 0;
-            this.dashboard.Text = "Dashboard";
-            this.dashboard.UseVisualStyleBackColor = true;
-            this.dashboard.Click += new System.EventHandler(this.button1_Click);
             // 
             // Title
             // 
@@ -57,7 +46,7 @@
             // 
             // heroes
             // 
-            this.heroes.Location = new System.Drawing.Point(105, 63);
+            this.heroes.Location = new System.Drawing.Point(27, 68);
             this.heroes.Name = "heroes";
             this.heroes.Size = new System.Drawing.Size(75, 23);
             this.heroes.TabIndex = 2;
@@ -89,6 +78,7 @@
             this.topHeroesList.Name = "topHeroesList";
             this.topHeroesList.Size = new System.Drawing.Size(419, 184);
             this.topHeroesList.TabIndex = 4;
+            this.topHeroesList.SelectedIndexChanged += new System.EventHandler(this.topHeroesList_SelectedIndexChanged);
             // 
             // App
             // 
@@ -99,7 +89,6 @@
             this.Controls.Add(this.topHeroesLabel);
             this.Controls.Add(this.heroes);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.dashboard);
             this.Name = "App";
             this.Text = "Tours of Heroes";
             this.Load += new System.EventHandler(this.App_Load);
@@ -109,8 +98,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button dashboard;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button heroes;
         private System.Windows.Forms.Label topHeroesLabel;
